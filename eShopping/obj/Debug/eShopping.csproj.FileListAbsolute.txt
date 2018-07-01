@@ -1,0 +1,11 @@
+E:\Studying\study\hnd\Application Development\eShopping\eShopping\bin\Debug\eShopping.exe.config
+E:\Studying\study\hnd\Application Development\eShopping\eShopping\bin\Debug\eShopping.exe
+E:\Studying\study\hnd\Application Development\eShopping\eShopping\bin\Debug\eShopping.pdb
+E:\Studying\study\hnd\Application Development\eShopping\eShopping\obj\Debug\eShopping.csprojResolveAssemblyReference.cache
+E:\Studying\study\hnd\Application Development\eShopping\eShopping\obj\Debug\eShopping.Properties.Resources.resources
+E:\Studying\study\hnd\Application Development\eShopping\eShopping\obj\Debug\eShopping.csproj.GenerateResource.Cache
+E:\Studying\study\hnd\Application Development\eShopping\eShopping\obj\Debug\eShopping.exe
+E:\Studying\study\hnd\Application Development\eShopping\eShopping\obj\Debug\eShopping.pdb
+E:\Studying\study\hnd\Application Development\eShopping\eShopping\bin\Debug\Bunifu_UI_v1.5.3.dll
+E:\Studying\study\hnd\Application Development\eShopping\eShopping\obj\Debug\eShopping.form_signin.resources
+E:\Studying\study\hnd\Application Development\eShopping\eShopping\bin\Debug\MySql.Data.dll
