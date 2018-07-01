@@ -9,3 +9,6 @@ E:\Studying\study\hnd\Application Development\eShopping\eShopping\obj\Debug\eSho
 E:\Studying\study\hnd\Application Development\eShopping\eShopping\bin\Debug\Bunifu_UI_v1.5.3.dll
 E:\Studying\study\hnd\Application Development\eShopping\eShopping\obj\Debug\eShopping.form_signin.resources
 E:\Studying\study\hnd\Application Development\eShopping\eShopping\bin\Debug\MySql.Data.dll
+E:\Studying\study\hnd\Application Development\eShopping\eShopping\obj\Debug\eShopping.Form_DashBoard.resources
+E:\Studying\study\hnd\Application Development\eShopping\eShopping\bin\Debug\MetroFramework.dll
+E:\Studying\study\hnd\Application Development\eShopping\eShopping\bin\Debug\MetroFramework.Fonts.dll

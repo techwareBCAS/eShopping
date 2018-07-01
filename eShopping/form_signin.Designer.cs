@@ -146,7 +146,7 @@
             this.btn_r_signup.IdleFillColor = System.Drawing.Color.White;
             this.btn_r_signup.IdleForecolor = System.Drawing.Color.SeaGreen;
             this.btn_r_signup.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.btn_r_signup.Location = new System.Drawing.Point(65, 334);
+            this.btn_r_signup.Location = new System.Drawing.Point(65, 307);
             this.btn_r_signup.Margin = new System.Windows.Forms.Padding(5);
             this.btn_r_signup.Name = "btn_r_signup";
             this.btn_r_signup.Size = new System.Drawing.Size(237, 52);
@@ -273,7 +273,7 @@
             this.ClientSize = new System.Drawing.Size(1118, 699);
             this.Controls.Add(this.bunifuCards1);
             this.Controls.Add(this.pictureBox1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "form_signin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "E-Shopping";

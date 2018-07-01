@@ -16,7 +16,7 @@ namespace eShopping
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new form_signin());
+            Application.Run(new Form_DashBoard());
         }
     }
 }
