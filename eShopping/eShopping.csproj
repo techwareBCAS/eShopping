@@ -78,20 +78,42 @@
     <Compile Include="Form_DashBoard.Designer.cs">
       <DependentUpon>Form_DashBoard.cs</DependentUpon>
     </Compile>
-    <Compile Include="form_signin.cs">
+    <Compile Include="Form_Product.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="form_signin.Designer.cs">
-      <DependentUpon>form_signin.cs</DependentUpon>
+    <Compile Include="Form_Product.Designer.cs">
+      <DependentUpon>Form_Product.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_signin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_signin.Designer.cs">
+      <DependentUpon>Form_signin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="product.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="user.cs" />
+    <Compile Include="UserControl_Market.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl_Market.Designer.cs">
+      <DependentUpon>UserControl_Market.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl_Product.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl_Product.Designer.cs">
+      <DependentUpon>UserControl_Product.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form_DashBoard.resx">
       <DependentUpon>Form_DashBoard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="form_signin.resx">
-      <DependentUpon>form_signin.cs</DependentUpon>
+    <EmbeddedResource Include="Form_Product.resx">
+      <DependentUpon>Form_Product.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_signin.resx">
+      <DependentUpon>Form_signin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -102,6 +124,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UserControl_Market.resx">
+      <DependentUpon>UserControl_Market.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl_Product.resx">
+      <DependentUpon>UserControl_Product.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="ClassDiagram1.cd" />
     <None Include="DataSet1.xsc">
       <DependentUpon>DataSet1.xsd</DependentUpon>

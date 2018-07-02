@@ -1,6 +1,6 @@
 ﻿namespace eShopping
 {
-    partial class form_signin
+    partial class Form_signin
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(form_signin));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_signin));
             this.txt_u_username = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.txt_u_password = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.bunifuCards1 = new Bunifu.Framework.UI.BunifuCards();

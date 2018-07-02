@@ -26,3 +26,6 @@ C:\Users\Asus\Documents\GitHub\eShopping\eShopping\obj\Debug\eShopping.Form_Dash
 C:\Users\Asus\Documents\GitHub\eShopping\eShopping\obj\Debug\eShopping.form_signin.resources
 C:\Users\Asus\Documents\GitHub\eShopping\eShopping\obj\Debug\eShopping.Properties.Resources.resources
 C:\Users\Asus\Documents\GitHub\eShopping\eShopping\obj\Debug\eShopping.csproj.GenerateResource.Cache
+C:\Users\Asus\Documents\GitHub\eShopping\eShopping\obj\Debug\eShopping.UserControl_Market.resources
+C:\Users\Asus\Documents\GitHub\eShopping\eShopping\obj\Debug\eShopping.UserControl_Product.resources
+C:\Users\Asus\Documents\GitHub\eShopping\eShopping\obj\Debug\eShopping.Form_Product.resources

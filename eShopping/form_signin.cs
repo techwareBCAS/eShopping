@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace eShopping
 {
-    public partial class form_signin : Form
+    public partial class Form_signin : Form
     {
-        public form_signin()
+        public Form_signin()
         {
             InitializeComponent();
         }

@@ -21,11 +21,17 @@ namespace eShopping
         {
             sidepanel.Height = btn_market.Height;
             sidepanel.Top = btn_market.Top;
+
+            userControl_Market1.Show();
+            userControl_Product1.Hide();
         }
         private void btn_products_Click(object sender, EventArgs e)
         {
             sidepanel.Height = btn_products.Height;
             sidepanel.Top = btn_products.Top;
+
+            userControl_Market1.Hide();
+            userControl_Product1.Show();
         }
         private void btn_cart_Click(object sender, EventArgs e)
         {
@@ -37,9 +43,10 @@ namespace eShopping
             sidepanel.Height = btn_settings.Height;
             sidepanel.Top = btn_settings.Top;
         }
+
         private void lbl_exit_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
+        }       
     }
 }

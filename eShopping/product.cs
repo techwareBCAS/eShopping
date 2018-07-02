@@ -6,17 +6,18 @@ using System.Threading.Tasks;
 
 namespace eShopping
 {
-    class user
+    class product
     {
-        DataSet1TableAdapters.tbl_userTableAdapter tbl_user = new DataSet1TableAdapters.tbl_userTableAdapter();
-        public user()
+        DataSet1TableAdapters.tbl_productTableAdapter tbl_user = new DataSet1TableAdapters.tbl_productTableAdapter();
+
+        public product()
         {
             //empty
         }
-        public bool login(string uname, string upass)
+        public bool add(string p_product, decimal p_price, int p_qty, string p_description)
         {
-            int count = tbl_user.GetDataForLogin(uname, upass).Rows.Count;
-            if (count > 0)
+            int checker = tbl_user.InsertQueryForProduct(p_product, p_price, p_qty, p_description);
+            if (checker > 0)
             {
                 return true;
             }
@@ -25,9 +26,9 @@ namespace eShopping
                 return false;
             }
         }
-        public bool signup(string rname, string rpass)
+        public bool delete(int p_id)
         {
-            int checker = tbl_user.InsertQueryforRegistration(rname, rpass);
+            int checker = tbl_user.DeleteQueryForProduct(p_id);
             if (checker > 0)
             {
                 return true;
