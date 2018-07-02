@@ -40,25 +40,25 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.listView1 = new System.Windows.Forms.ListView();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
+            this.sidepanel = new System.Windows.Forms.Panel();
+            this.btn_settings = new System.Windows.Forms.Button();
+            this.btn_cart = new System.Windows.Forms.Button();
+            this.btn_products = new System.Windows.Forms.Button();
+            this.btn_market = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.lbl_exit = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
-            this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
+            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -192,6 +192,14 @@
             this.panel1.Size = new System.Drawing.Size(870, 768);
             this.panel1.TabIndex = 78;
             // 
+            // listView1
+            // 
+            this.listView1.Location = new System.Drawing.Point(16, 47);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(828, 698);
+            this.listView1.TabIndex = 78;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
@@ -215,11 +223,11 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
-            this.panel4.Controls.Add(this.panel7);
-            this.panel4.Controls.Add(this.button6);
-            this.panel4.Controls.Add(this.button5);
-            this.panel4.Controls.Add(this.button4);
-            this.panel4.Controls.Add(this.button3);
+            this.panel4.Controls.Add(this.sidepanel);
+            this.panel4.Controls.Add(this.btn_settings);
+            this.panel4.Controls.Add(this.btn_cart);
+            this.panel4.Controls.Add(this.btn_products);
+            this.panel4.Controls.Add(this.btn_market);
             this.panel4.Controls.Add(this.panel6);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel4.Location = new System.Drawing.Point(0, 0);
@@ -227,18 +235,77 @@
             this.panel4.Size = new System.Drawing.Size(249, 914);
             this.panel4.TabIndex = 81;
             // 
-            // panel5
+            // sidepanel
             // 
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
-            this.panel5.Controls.Add(this.label6);
-            this.panel5.Controls.Add(this.label1);
-            this.panel5.Controls.Add(this.button2);
-            this.panel5.Controls.Add(this.button1);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel5.Location = new System.Drawing.Point(249, 0);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1161, 100);
-            this.panel5.TabIndex = 82;
+            this.sidepanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
+            this.sidepanel.Location = new System.Drawing.Point(0, 194);
+            this.sidepanel.Name = "sidepanel";
+            this.sidepanel.Size = new System.Drawing.Size(13, 98);
+            this.sidepanel.TabIndex = 2;
+            // 
+            // btn_settings
+            // 
+            this.btn_settings.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_settings.FlatAppearance.BorderSize = 0;
+            this.btn_settings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_settings.Font = new System.Drawing.Font("Century Gothic", 27.75F);
+            this.btn_settings.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btn_settings.Location = new System.Drawing.Point(0, 488);
+            this.btn_settings.Name = "btn_settings";
+            this.btn_settings.Size = new System.Drawing.Size(249, 98);
+            this.btn_settings.TabIndex = 1;
+            this.btn_settings.Text = " Setting";
+            this.btn_settings.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_settings.UseVisualStyleBackColor = true;
+            this.btn_settings.Click += new System.EventHandler(this.btn_settings_Click);
+            // 
+            // btn_cart
+            // 
+            this.btn_cart.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_cart.FlatAppearance.BorderSize = 0;
+            this.btn_cart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_cart.Font = new System.Drawing.Font("Century Gothic", 27.75F);
+            this.btn_cart.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btn_cart.Location = new System.Drawing.Point(0, 390);
+            this.btn_cart.Name = "btn_cart";
+            this.btn_cart.Size = new System.Drawing.Size(249, 98);
+            this.btn_cart.TabIndex = 1;
+            this.btn_cart.Text = " Cart";
+            this.btn_cart.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_cart.UseVisualStyleBackColor = true;
+            this.btn_cart.Click += new System.EventHandler(this.btn_cart_Click);
+            // 
+            // btn_products
+            // 
+            this.btn_products.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_products.FlatAppearance.BorderSize = 0;
+            this.btn_products.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_products.Font = new System.Drawing.Font("Century Gothic", 27.75F);
+            this.btn_products.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btn_products.Location = new System.Drawing.Point(0, 292);
+            this.btn_products.Name = "btn_products";
+            this.btn_products.Size = new System.Drawing.Size(249, 98);
+            this.btn_products.TabIndex = 1;
+            this.btn_products.Text = " Products";
+            this.btn_products.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_products.UseVisualStyleBackColor = true;
+            this.btn_products.Click += new System.EventHandler(this.btn_products_Click);
+            // 
+            // btn_market
+            // 
+            this.btn_market.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_market.FlatAppearance.BorderSize = 0;
+            this.btn_market.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_market.Font = new System.Drawing.Font("Century Gothic", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_market.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btn_market.Location = new System.Drawing.Point(0, 194);
+            this.btn_market.Name = "btn_market";
+            this.btn_market.Size = new System.Drawing.Size(249, 98);
+            this.btn_market.TabIndex = 1;
+            this.btn_market.Text = " Market";
+            this.btn_market.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_market.UseVisualStyleBackColor = true;
+            this.btn_market.Click += new System.EventHandler(this.btn_Market_Click);
             // 
             // panel6
             // 
@@ -249,18 +316,6 @@
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(249, 194);
             this.panel6.TabIndex = 0;
-            // 
-            // label6
-            // 
-            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label6.Location = new System.Drawing.Point(1115, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(43, 44);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "X";
             // 
             // label7
             // 
@@ -273,81 +328,31 @@
             this.label7.TabIndex = 0;
             this.label7.Text = "Logo";
             // 
-            // button3
+            // panel5
             // 
-            this.button3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Century Gothic", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.button3.Location = new System.Drawing.Point(0, 194);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(249, 98);
-            this.button3.TabIndex = 1;
-            this.button3.Text = " Market";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.UseVisualStyleBackColor = true;
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
+            this.panel5.Controls.Add(this.lbl_exit);
+            this.panel5.Controls.Add(this.label1);
+            this.panel5.Controls.Add(this.button2);
+            this.panel5.Controls.Add(this.button1);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel5.Location = new System.Drawing.Point(249, 0);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(1161, 100);
+            this.panel5.TabIndex = 82;
             // 
-            // button4
+            // lbl_exit
             // 
-            this.button4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Century Gothic", 27.75F);
-            this.button4.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.button4.Location = new System.Drawing.Point(0, 292);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(249, 98);
-            this.button4.TabIndex = 1;
-            this.button4.Text = " Products";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // button5
-            // 
-            this.button5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Century Gothic", 27.75F);
-            this.button5.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.button5.Location = new System.Drawing.Point(0, 390);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(249, 98);
-            this.button5.TabIndex = 1;
-            this.button5.Text = " Cart";
-            this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // button6
-            // 
-            this.button6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Century Gothic", 27.75F);
-            this.button6.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.button6.Location = new System.Drawing.Point(0, 488);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(249, 98);
-            this.button6.TabIndex = 1;
-            this.button6.Text = " Setting";
-            this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.UseVisualStyleBackColor = true;
-            // 
-            // panel7
-            // 
-            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
-            this.panel7.Location = new System.Drawing.Point(0, 194);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(13, 98);
-            this.panel7.TabIndex = 2;
-            // 
-            // listView1
-            // 
-            this.listView1.Location = new System.Drawing.Point(16, 47);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(828, 698);
-            this.listView1.TabIndex = 78;
-            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.lbl_exit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl_exit.AutoSize = true;
+            this.lbl_exit.Font = new System.Drawing.Font("Century Gothic", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_exit.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lbl_exit.Location = new System.Drawing.Point(1115, 0);
+            this.lbl_exit.Name = "lbl_exit";
+            this.lbl_exit.Size = new System.Drawing.Size(43, 44);
+            this.lbl_exit.TabIndex = 0;
+            this.lbl_exit.Text = "X";
+            this.lbl_exit.Click += new System.EventHandler(this.lbl_exit_Click);
             // 
             // Form_DashBoard
             // 
@@ -371,10 +376,10 @@
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel4.ResumeLayout(false);
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -398,13 +403,13 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Label lbl_exit;
+        private System.Windows.Forms.Button btn_settings;
+        private System.Windows.Forms.Button btn_cart;
+        private System.Windows.Forms.Button btn_products;
+        private System.Windows.Forms.Button btn_market;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Panel sidepanel;
         private System.Windows.Forms.ListView listView1;
     }
 }
