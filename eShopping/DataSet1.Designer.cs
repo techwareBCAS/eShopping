@@ -617,10 +617,6 @@ namespace eShopping {
             
             private global::System.Data.DataColumn columnp_description;
             
-            private global::System.Data.DataColumn columnp_price1;
-            
-            private global::System.Data.DataColumn columnp_qty1;
-            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public tbl_productDataTable() {
@@ -696,22 +692,6 @@ namespace eShopping {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn p_price1Column {
-                get {
-                    return this.columnp_price1;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn p_qty1Column {
-                get {
-                    return this.columnp_qty1;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -747,16 +727,14 @@ namespace eShopping {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public tbl_productRow Addtbl_productRow(string p_name, double p_price, double p_qty, string p_description, decimal p_price1, int p_qty1) {
+            public tbl_productRow Addtbl_productRow(string p_name, decimal p_price, int p_qty, string p_description) {
                 tbl_productRow rowtbl_productRow = ((tbl_productRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         p_name,
                         p_price,
                         p_qty,
-                        p_description,
-                        p_price1,
-                        p_qty1};
+                        p_description};
                 rowtbl_productRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowtbl_productRow);
                 return rowtbl_productRow;
@@ -791,8 +769,6 @@ namespace eShopping {
                 this.columnp_price = base.Columns["p_price"];
                 this.columnp_qty = base.Columns["p_qty"];
                 this.columnp_description = base.Columns["p_description"];
-                this.columnp_price1 = base.Columns["p_price1"];
-                this.columnp_qty1 = base.Columns["p_qty1"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -802,16 +778,12 @@ namespace eShopping {
                 base.Columns.Add(this.columnp_id);
                 this.columnp_name = new global::System.Data.DataColumn("p_name", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnp_name);
-                this.columnp_price = new global::System.Data.DataColumn("p_price", typeof(double), null, global::System.Data.MappingType.Element);
+                this.columnp_price = new global::System.Data.DataColumn("p_price", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnp_price);
-                this.columnp_qty = new global::System.Data.DataColumn("p_qty", typeof(double), null, global::System.Data.MappingType.Element);
+                this.columnp_qty = new global::System.Data.DataColumn("p_qty", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnp_qty);
                 this.columnp_description = new global::System.Data.DataColumn("p_description", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnp_description);
-                this.columnp_price1 = new global::System.Data.DataColumn("p_price1", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnp_price1);
-                this.columnp_qty1 = new global::System.Data.DataColumn("p_qty1", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnp_qty1);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnp_id}, true));
                 this.columnp_id.AutoIncrement = true;
@@ -821,8 +793,6 @@ namespace eShopping {
                 this.columnp_id.Unique = true;
                 this.columnp_name.MaxLength = 45;
                 this.columnp_description.MaxLength = 45;
-                this.columnp_price1.Caption = "p_price";
-                this.columnp_qty1.Caption = "p_qty";
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1040,10 +1010,10 @@ namespace eShopping {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public double p_price {
+            public decimal p_price {
                 get {
                     try {
-                        return ((double)(this[this.tabletbl_product.p_priceColumn]));
+                        return ((decimal)(this[this.tabletbl_product.p_priceColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'p_price\' in table \'tbl_product\' is DBNull.", e);
@@ -1056,10 +1026,10 @@ namespace eShopping {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public double p_qty {
+            public int p_qty {
                 get {
                     try {
-                        return ((double)(this[this.tabletbl_product.p_qtyColumn]));
+                        return ((int)(this[this.tabletbl_product.p_qtyColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'p_qty\' in table \'tbl_product\' is DBNull.", e);
@@ -1083,38 +1053,6 @@ namespace eShopping {
                 }
                 set {
                     this[this.tabletbl_product.p_descriptionColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public decimal p_price1 {
-                get {
-                    try {
-                        return ((decimal)(this[this.tabletbl_product.p_price1Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'p_price1\' in table \'tbl_product\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tabletbl_product.p_price1Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int p_qty1 {
-                get {
-                    try {
-                        return ((int)(this[this.tabletbl_product.p_qty1Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'p_qty1\' in table \'tbl_product\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tabletbl_product.p_qty1Column] = value;
                 }
             }
             
@@ -1164,30 +1102,6 @@ namespace eShopping {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void Setp_descriptionNull() {
                 this[this.tabletbl_product.p_descriptionColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool Isp_price1Null() {
-                return this.IsNull(this.tabletbl_product.p_price1Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void Setp_price1Null() {
-                this[this.tabletbl_product.p_price1Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool Isp_qty1Null() {
-                return this.IsNull(this.tabletbl_product.p_qty1Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void Setp_qty1Null() {
-                this[this.tabletbl_product.p_qty1Column] = global::System.Convert.DBNull;
             }
         }
         
@@ -1887,9 +1801,9 @@ namespace eShopping.DataSet1TableAdapters {
             tableMapping.DataSetTable = "tbl_product";
             tableMapping.ColumnMappings.Add("p_id", "p_id");
             tableMapping.ColumnMappings.Add("p_name", "p_name");
+            tableMapping.ColumnMappings.Add("p_price", "p_price");
+            tableMapping.ColumnMappings.Add("p_qty", "p_qty");
             tableMapping.ColumnMappings.Add("p_description", "p_description");
-            tableMapping.ColumnMappings.Add("p_price", "p_price1");
-            tableMapping.ColumnMappings.Add("p_qty", "p_qty1");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
@@ -2128,7 +2042,7 @@ namespace eShopping.DataSet1TableAdapters {
             this._commandCollection[0] = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT        p_id, p_name, p_price, p_qty, p_description\r\nFROM            tbl_pr" +
-                "oduct";
+                "oduct\r\n";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._commandCollection[1].Connection = this.Connection;
@@ -2158,14 +2072,14 @@ namespace eShopping.DataSet1TableAdapters {
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p_price";
             param.DbType = global::System.Data.DbType.Decimal;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Double;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.NewDecimal;
             param.IsNullable = true;
             param.SourceColumn = "p_price";
             this._commandCollection[2].Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p_qty";
-            param.DbType = global::System.Data.DbType.Decimal;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Double;
+            param.DbType = global::System.Data.DbType.Int32;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
             param.IsNullable = true;
             param.SourceColumn = "p_qty";
             this._commandCollection[2].Parameters.Add(param);
@@ -2249,7 +2163,7 @@ namespace eShopping.DataSet1TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, false)]
-        public virtual int InsertQueryForProduct(string p_name, global::System.Nullable<decimal> p_price, global::System.Nullable<decimal> p_qty, string p_description) {
+        public virtual int InsertQueryForProduct(string p_name, global::System.Nullable<decimal> p_price, global::System.Nullable<int> p_qty, string p_description) {
             global::MySql.Data.MySqlClient.MySqlCommand command = this.CommandCollection[2];
             if ((p_name == null)) {
                 command.Parameters[0].Value = global::System.DBNull.Value;
@@ -2264,7 +2178,7 @@ namespace eShopping.DataSet1TableAdapters {
                 command.Parameters[1].Value = global::System.DBNull.Value;
             }
             if ((p_qty.HasValue == true)) {
-                command.Parameters[2].Value = ((decimal)(p_qty.Value));
+                command.Parameters[2].Value = ((int)(p_qty.Value));
             }
             else {
                 command.Parameters[2].Value = global::System.DBNull.Value;

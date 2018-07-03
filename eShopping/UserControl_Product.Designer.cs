@@ -29,11 +29,14 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserControl_Product));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
-            this.listView_Product = new System.Windows.Forms.ListView();
             this.btn_Add = new System.Windows.Forms.Button();
             this.btn_Update = new System.Windows.Forms.Button();
             this.btn_Remove = new System.Windows.Forms.Button();
+            this.dataGridView_Product = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Product)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -45,14 +48,6 @@
             this.label1.Size = new System.Drawing.Size(220, 44);
             this.label1.TabIndex = 0;
             this.label1.Text = "Product List";
-            // 
-            // listView_Product
-            // 
-            this.listView_Product.Location = new System.Drawing.Point(21, 55);
-            this.listView_Product.Name = "listView_Product";
-            this.listView_Product.Size = new System.Drawing.Size(909, 630);
-            this.listView_Product.TabIndex = 1;
-            this.listView_Product.UseCompatibleStateImageBehavior = false;
             // 
             // btn_Add
             // 
@@ -106,19 +101,49 @@
             this.btn_Remove.Text = "Remove";
             this.btn_Remove.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_Remove.UseVisualStyleBackColor = false;
+            this.btn_Remove.Click += new System.EventHandler(this.btn_Remove_Click);
+            // 
+            // dataGridView_Product
+            // 
+            this.dataGridView_Product.AllowUserToAddRows = false;
+            this.dataGridView_Product.AllowUserToDeleteRows = false;
+            this.dataGridView_Product.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_Product.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridView_Product.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView_Product.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridView_Product.Location = new System.Drawing.Point(21, 55);
+            this.dataGridView_Product.Name = "dataGridView_Product";
+            this.dataGridView_Product.ReadOnly = true;
+            this.dataGridView_Product.Size = new System.Drawing.Size(906, 655);
+            this.dataGridView_Product.TabIndex = 108;
             // 
             // UserControl_Product
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.dataGridView_Product);
             this.Controls.Add(this.btn_Remove);
             this.Controls.Add(this.btn_Update);
             this.Controls.Add(this.btn_Add);
-            this.Controls.Add(this.listView_Product);
             this.Controls.Add(this.label1);
             this.Name = "UserControl_Product";
             this.Size = new System.Drawing.Size(1147, 764);
             this.Load += new System.EventHandler(this.UserControl_Product_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Product)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -127,9 +152,9 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ListView listView_Product;
         private System.Windows.Forms.Button btn_Add;
         private System.Windows.Forms.Button btn_Update;
         private System.Windows.Forms.Button btn_Remove;
+        private System.Windows.Forms.DataGridView dataGridView_Product;
     }
 }
