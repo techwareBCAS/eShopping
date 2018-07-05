@@ -265,7 +265,7 @@
             // 
             this.tbl_userTableAdapter1.ClearBeforeFill = true;
             // 
-            // form_signin
+            // Form_signin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -274,7 +274,7 @@
             this.Controls.Add(this.bunifuCards1);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "form_signin";
+            this.Name = "Form_signin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "E-Shopping";
             this.bunifuCards1.ResumeLayout(false);

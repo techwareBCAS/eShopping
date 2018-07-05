@@ -26,6 +26,17 @@ namespace eShopping
                 return false;
             }
         }
+        public bool updatestring(string p_product, decimal p_price, int p_qty, string p_description, int p_id){
+            int checker = tbl_user.UpdateQueryForProduct(p_product, p_price, p_qty, p_description, p_id);
+            if (checker > 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
         public bool delete(int p_id)
         {
             int checker = tbl_user.DeleteQueryForProduct(p_id);

@@ -21,7 +21,6 @@ C:\Users\Asus\Documents\GitHub\eShopping\eShopping\bin\Debug\Bunifu_UI_v1.5.3.dl
 C:\Users\Asus\Documents\GitHub\eShopping\eShopping\bin\Debug\MetroFramework.dll
 C:\Users\Asus\Documents\GitHub\eShopping\eShopping\bin\Debug\MetroFramework.Fonts.dll
 C:\Users\Asus\Documents\GitHub\eShopping\eShopping\bin\Debug\MySql.Data.dll
-C:\Users\Asus\Documents\GitHub\eShopping\eShopping\obj\Debug\eShopping.csprojResolveAssemblyReference.cache
 C:\Users\Asus\Documents\GitHub\eShopping\eShopping\obj\Debug\eShopping.Form_DashBoard.resources
 C:\Users\Asus\Documents\GitHub\eShopping\eShopping\obj\Debug\eShopping.form_signin.resources
 C:\Users\Asus\Documents\GitHub\eShopping\eShopping\obj\Debug\eShopping.Properties.Resources.resources
@@ -29,3 +28,4 @@ C:\Users\Asus\Documents\GitHub\eShopping\eShopping\obj\Debug\eShopping.csproj.Ge
 C:\Users\Asus\Documents\GitHub\eShopping\eShopping\obj\Debug\eShopping.UserControl_Market.resources
 C:\Users\Asus\Documents\GitHub\eShopping\eShopping\obj\Debug\eShopping.UserControl_Product.resources
 C:\Users\Asus\Documents\GitHub\eShopping\eShopping\obj\Debug\eShopping.Form_Product.resources
+C:\Users\Asus\Documents\GitHub\eShopping\eShopping\obj\Debug\eShopping.csprojResolveAssemblyReference.cache

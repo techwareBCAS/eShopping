@@ -5,7 +5,7 @@
       <DataSource DefaultConnectionIndex="1" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
           <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="eshoppingConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="eshoppingConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.eShopping.Properties.Settings.GlobalReference.Default.eshoppingConnectionString" Provider="MySql.Data.MySqlClient" />
-          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="eshoppingConnectionString1" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="eshoppingConnectionString1 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.eShopping.Properties.Settings.GlobalReference.Default.eshoppingConnectionString1" Provider="MySql.Data.MySqlClient" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="eshoppingConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="eshoppingConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.eShopping.Properties.Settings.GlobalReference.Default.eshoppingConnectionString" Provider="MySql.Data.MySqlClient" />
         </Connections>
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="tbl_userTableAdapter" GeneratorDataComponentClassName="tbl_userTableAdapter" Name="tbl_user" UserDataComponentName="tbl_userTableAdapter">
@@ -86,7 +86,7 @@ VALUES        (@rusername, @rpass)</CommandText>
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="tbl_productTableAdapter" GeneratorDataComponentClassName="tbl_productTableAdapter" Name="tbl_product" UserDataComponentName="tbl_productTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="eshoppingConnectionString1 (Settings)" DbObjectName="eshopping.tbl_product" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillForProduct" GenerateMethods="Fill" GenerateShortCommands="false" GeneratorSourceName="FillForProduct" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="FillForProduct">
+              <DbSource ConnectionRef="eshoppingConnectionString (Settings)" DbObjectName="eshopping.tbl_product" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillForProduct" GenerateMethods="Fill" GenerateShortCommands="false" GeneratorSourceName="FillForProduct" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="FillForProduct">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM `tbl_product` WHERE ((`p_id` = @p1) AND ((@p2 = 1 AND `p_name` IS NULL) OR (`p_name` = @p3)) AND ((@p4 = 1 AND `p_price` IS NULL) OR (`p_price` = @p5)) AND ((@p6 = 1 AND `p_qty` IS NULL) OR (`p_qty` = @p7)) AND ((@p8 = 1 AND `p_description` IS NULL) OR (`p_description` = @p9)))</CommandText>
@@ -152,7 +152,7 @@ FROM            tbl_product
               <Mapping SourceColumn="p_description" DataSetColumn="p_description" />
             </Mappings>
             <Sources>
-              <DbSource ConnectionRef="eshoppingConnectionString1 (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="DeleteQueryForProduct" Modifier="Public" Name="DeleteQueryForProduct" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="DeleteQueryForProduct">
+              <DbSource ConnectionRef="eshoppingConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="DeleteQueryForProduct" Modifier="Public" Name="DeleteQueryForProduct" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="DeleteQueryForProduct">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>DELETE FROM tbl_product
@@ -163,7 +163,7 @@ WHERE        (p_id = @p_id)</CommandText>
                   </DbCommand>
                 </DeleteCommand>
               </DbSource>
-              <DbSource ConnectionRef="eshoppingConnectionString1 (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="InsertQueryForProduct" Modifier="Public" Name="InsertQueryForProduct" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="InsertQueryForProduct">
+              <DbSource ConnectionRef="eshoppingConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="InsertQueryForProduct" Modifier="Public" Name="InsertQueryForProduct" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="InsertQueryForProduct">
                 <InsertCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>INSERT INTO tbl_product
@@ -178,6 +178,22 @@ VALUES        (@p_name, @p_price, @p_qty, @p_description)</CommandText>
                   </DbCommand>
                 </InsertCommand>
               </DbSource>
+              <DbSource ConnectionRef="eshoppingConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="UpdateQueryForProduct" Modifier="Public" Name="UpdateQueryForProduct" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="UpdateQueryForProduct">
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>UPDATE       tbl_product
+SET                p_name = @p_name, p_price = @p_price, p_qty = @p_qty, p_description = @p_description
+WHERE        (p_id = @p_id)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="p_name" ColumnName="p_name" DataSourceName="eshopping.tbl_product" DataTypeServer="varchar(45)(45)" DbType="String" Direction="Input" ParameterName="@p_name" Precision="0" ProviderType="VarChar" Scale="0" Size="45" SourceColumn="p_name" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="p_price" ColumnName="p_price" DataSourceName="eshopping.tbl_product" DataTypeServer="decimal(10,0)" DbType="Decimal" Direction="Input" ParameterName="@p_price" Precision="10" ProviderType="NewDecimal" Scale="0" Size="0" SourceColumn="p_price" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="p_qty" ColumnName="p_qty" DataSourceName="eshopping.tbl_product" DataTypeServer="int(11)" DbType="Int32" Direction="Input" ParameterName="@p_qty" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="p_qty" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="p_description" ColumnName="p_description" DataSourceName="eshopping.tbl_product" DataTypeServer="varchar(45)(45)" DbType="String" Direction="Input" ParameterName="@p_description" Precision="0" ProviderType="VarChar" Scale="0" Size="45" SourceColumn="p_description" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="p_id" ColumnName="p_id" DataSourceName="eshopping.tbl_product" DataTypeServer="int(11)" DbType="Int32" Direction="Input" ParameterName="@p_id" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="p_id" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
             </Sources>
           </TableAdapter>
         </Tables>
@@ -188,7 +204,7 @@ VALUES        (@p_name, @p_price, @p_qty, @p_description)</CommandText>
   <xs:element name="DataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSet1" msprop:Generator_UserDSName="DataSet1">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="tbl_user" msprop:Generator_TableClassName="tbl_userDataTable" msprop:Generator_TableVarName="tabletbl_user" msprop:Generator_RowChangedName="tbl_userRowChanged" msprop:Generator_TablePropName="tbl_user" msprop:Generator_RowDeletingName="tbl_userRowDeleting" msprop:Generator_RowChangingName="tbl_userRowChanging" msprop:Generator_RowEvHandlerName="tbl_userRowChangeEventHandler" msprop:Generator_RowDeletedName="tbl_userRowDeleted" msprop:Generator_RowClassName="tbl_userRow" msprop:Generator_UserTableName="tbl_user" msprop:Generator_RowEvArgName="tbl_userRowChangeEvent">
+        <xs:element name="tbl_user" msprop:Generator_TableClassName="tbl_userDataTable" msprop:Generator_TableVarName="tabletbl_user" msprop:Generator_TablePropName="tbl_user" msprop:Generator_RowDeletingName="tbl_userRowDeleting" msprop:Generator_RowChangingName="tbl_userRowChanging" msprop:Generator_RowEvHandlerName="tbl_userRowChangeEventHandler" msprop:Generator_RowDeletedName="tbl_userRowDeleted" msprop:Generator_UserTableName="tbl_user" msprop:Generator_RowChangedName="tbl_userRowChanged" msprop:Generator_RowEvArgName="tbl_userRowChangeEvent" msprop:Generator_RowClassName="tbl_userRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="id" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />
@@ -209,7 +225,7 @@ VALUES        (@p_name, @p_price, @p_qty, @p_description)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="tbl_product" msprop:Generator_TableClassName="tbl_productDataTable" msprop:Generator_TableVarName="tabletbl_product" msprop:Generator_TablePropName="tbl_product" msprop:Generator_RowDeletingName="tbl_productRowDeleting" msprop:Generator_RowChangingName="tbl_productRowChanging" msprop:Generator_RowEvHandlerName="tbl_productRowChangeEventHandler" msprop:Generator_RowDeletedName="tbl_productRowDeleted" msprop:Generator_UserTableName="tbl_product" msprop:Generator_RowChangedName="tbl_productRowChanged" msprop:Generator_RowEvArgName="tbl_productRowChangeEvent" msprop:Generator_RowClassName="tbl_productRow">
+        <xs:element name="tbl_product" msprop:Generator_TableClassName="tbl_productDataTable" msprop:Generator_TableVarName="tabletbl_product" msprop:Generator_RowChangedName="tbl_productRowChanged" msprop:Generator_TablePropName="tbl_product" msprop:Generator_RowDeletingName="tbl_productRowDeleting" msprop:Generator_RowChangingName="tbl_productRowChanging" msprop:Generator_RowEvHandlerName="tbl_productRowChangeEventHandler" msprop:Generator_RowDeletedName="tbl_productRowDeleted" msprop:Generator_RowClassName="tbl_productRow" msprop:Generator_UserTableName="tbl_product" msprop:Generator_RowEvArgName="tbl_productRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="p_id" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnp_id" msprop:Generator_ColumnPropNameInRow="p_id" msprop:Generator_ColumnPropNameInTable="p_idColumn" msprop:Generator_UserColumnName="p_id" type="xs:int" />
